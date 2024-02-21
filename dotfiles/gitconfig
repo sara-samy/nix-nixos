@@ -1,0 +1,14 @@
+[user]
+  name = sara-samy
+  email = intermsofart@hotmail.com
+[core]
+  editor = nvim
+[merge]
+  commit = no
+[alias]
+  unpushed = !GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline
+  unstage = restore --staged
+  uncommit = reset --soft HEAD~1
+  checkout-remote-branch = checkout --track
+  delete-remote-branch = push origin --delete
+  delete-local-branch = branch -d
