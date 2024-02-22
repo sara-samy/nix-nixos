@@ -105,6 +105,9 @@
   users.users.sarasamy.shell = pkgs.zsh;
   # List packages installed system-wide.
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0" # TODO workaround for obsidian
+  ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
     vim

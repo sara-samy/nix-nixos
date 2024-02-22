@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./applications.nix
+  ]; 
+
   home.username = "sarasamy";
   home.homeDirectory = "/home/sarasamy";
 
@@ -12,9 +16,11 @@
 
   home.packages = with pkgs; [
     neofetch
-    bat
     htop
     tree
+    unzip
+    gh
+    bat
   ];
 
   programs = {
