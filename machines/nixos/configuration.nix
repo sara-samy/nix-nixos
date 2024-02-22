@@ -99,7 +99,11 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  # List packages installed in global system profile.
+  # Enable zsh for system-wide.
+  programs.zsh.enable = true;
+  # Set zsh as default shell for user.
+  users.users.sarasamy.shell = pkgs.zsh;
+  # List packages installed system-wide.
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [

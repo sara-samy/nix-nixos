@@ -28,10 +28,32 @@
          { path = ../dotfiles/gitconfig; }
       ];
     };
-    neovim = {
+    zsh = {
       enable = true;
+      shellAliases = {
+        cd = "z";
+	man-git = "bat $HOME/lab/notes/man-pages/git.md";
+	man-nvim = "bat $HOME/lab/notes/man-pages/nvim.md";
+        update-os = "sudo nixos-rebuild switch --flake $HOME/nixos-config/flake.nix#nixos";
+      };
+      history = {
+        size = 10000;
+	path = "${config.xdg.dataHome}/zsh/zsh_history";
+      };
     };
-    gh = {
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+    eza = {
+      enable = true;
+      git = true;
+      icons = true;
+      extraOptions = [
+        "--icons"
+	];
+    };
+    neovim = {
       enable = true;
     };
   };
