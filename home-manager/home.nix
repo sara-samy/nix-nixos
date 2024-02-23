@@ -21,6 +21,8 @@
     unzip
     gh
     bat
+    fantasque-sans-mono
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
   ];
 
   programs = {
