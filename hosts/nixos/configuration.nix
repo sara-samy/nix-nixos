@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
   imports =
     [
       ./hardware-configuration.nix
@@ -21,10 +19,6 @@
   nix.settings.auto-optimise-store = true;
 
   networking.hostName = "nixos";
-  # networking.wireless.enable = true;
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Berlin";
@@ -75,19 +69,22 @@
   # Set up Gnome Desktop Enviroment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  programs.gnome-terminal.enable = false;
   services.gnome = {
     gnome-remote-desktop.enable = false;
     core-utilities.enable = false;
-};
+  };
+  environment.gnome.excludePackages = [ pkgs.gnome-tour ];
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
-  # Define a user account.
+  # Define a user.
   users.users.sarasamy = {
     isNormalUser = true;
     description = "Sara Samy";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-      kitty
+      gnome-console
     ];
   };
 
@@ -135,5 +132,4 @@
   # networking.firewall.enable = false;
 
   system.stateVersion = "23.11"; # Do not edit.
-
 }
