@@ -19,6 +19,7 @@
     unzip
     gh
     bat
+    nurl
     yt-dlp
     ffmpeg
     fantasque-sans-mono
