@@ -11,6 +11,10 @@
 
   home.username = "sarasamy";
   home.homeDirectory = "/home/sarasamy";
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
 
   fonts.fontconfig.enable = true;
 
@@ -24,6 +28,7 @@
     ffmpeg
     fantasque-sans-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
+    (google-fonts.override { fonts = [ "Spectral" ]; })
   ];
 
   programs.home-manager.enable = true;

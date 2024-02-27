@@ -3,7 +3,7 @@
     enable = true;
     theme = "Adventure Time";
     font = {
-      name = "Fantasque Sans Mono";
+      name = "Mononoki";
       size = 12.0;
     };
     keybindings = {
