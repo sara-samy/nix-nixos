@@ -7,12 +7,12 @@
       size = 12.0;
     };
     keybindings = {
-      "cmd+c" = "copy_to_clipboard";
-      "cmd+v" = "paste_from_clipboard";
-      "cmd+t" = "new_tab";
-      "cmd+w" = "close_tab";
-      "cmd+enter" = "new_window";
-      "shift+cmd+w" = "close_os_window";
+      "ctrl+c" = "copy_to_clipboard";
+      "ctrl+v" = "paste_from_clipboard";
+      "ctrl+t" = "new_tab";
+      "ctrl+w" = "close_tab";
+      "ctrl+enter" = "new_window";
+      "shift+ctrl+w" = "close_os_window";
     };
     extraConfig = builtins.readFile ./kitty.conf;
     shellIntegration = {

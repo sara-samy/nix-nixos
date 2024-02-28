@@ -111,6 +111,7 @@
     wget
     git
     curl
+    gnome.gnome-tweaks
   ];
   environment.variables.EDITOR = "vim";
 
