@@ -74,7 +74,6 @@
     gnome-remote-desktop.enable = false;
     core-utilities.enable = false;
   };
-  environment.gnome.excludePackages = [ pkgs.gnome-tour ];
   services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Define a user.
@@ -106,6 +105,7 @@
     "electron-25.9.0" # TODO workaround for obsidian
   ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  environment.gnome.excludePackages = [ pkgs.gnome-tour ];
   environment.systemPackages = with pkgs; [
     vim
     wget
