@@ -19,10 +19,11 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    neofetch
-    unzip
     gh
-    bat
+    fzf
+    unzip
+    ripgrep
+    neofetch
     nurl
     yt-dlp
     ffmpeg
@@ -33,15 +34,19 @@
 
   programs.home-manager.enable = true;
   programs.zoxide = {
-      enable = true;
-      options = [ "--cmd cd" ];
-      enableZshIntegration = true;
+    enable = true;
+    options = [ "--cmd cd" ];
+    enableZshIntegration = true;
   };
   programs.eza = {
-      enable = true;
-      git = true;
-      icons = true;
-      enableAliases = true;
-      extraOptions = [ "--icons" ];
-    };
+    enable = true;
+    git = true;
+    icons = true;
+    enableAliases = true;
+    extraOptions = [ "--icons" ];
+  };
+  programs.bat = {
+    enable = true;
+    config = { color="always";  pager = "less -FR";  theme = "Dracula"; };
+  };
 }
