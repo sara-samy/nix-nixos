@@ -15,9 +15,6 @@
     EDITOR = "nvim";
   };
 
-
-  fonts.fontconfig.enable = true;
-
   home.packages = with pkgs; [
     gh
     fzf
@@ -27,10 +24,18 @@
     nurl
     yt-dlp
     ffmpeg
+    zsh-powerlevel10k
     fantasque-sans-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
     (google-fonts.override { fonts = [ "Spectral" ]; })
   ];
+
+  home.file.".p10k.zsh" = {
+    source = ./.p10k.zsh;
+    executable = true;
+  };
+
+  fonts.fontconfig.enable = true;
 
   programs.home-manager.enable = true;
   programs.zoxide = {
