@@ -37,6 +37,12 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  # Mullvad vpn
+  services.mullvad-vpn = {
+    enable = true;
+    enableExcludeWrapper = false;
+    package = pkgs.mullvad-vpn;
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -126,6 +132,7 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  networking.iproute2.enable = true;
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
