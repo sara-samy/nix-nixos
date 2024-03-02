@@ -15,6 +15,10 @@
     EDITOR = "nvim";
   };
 
+  home.file."starship.toml" = {
+    source = ./starship.toml;
+  };
+
   home.packages = with pkgs; [
     gh
     fzf
@@ -24,16 +28,10 @@
     nurl
     yt-dlp
     ffmpeg
-    zsh-powerlevel10k
     fantasque-sans-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
     (google-fonts.override { fonts = [ "Spectral" ]; })
   ];
-
-  home.file.".p10k.zsh" = {
-    source = ./.p10k.zsh;
-    executable = true;
-  };
 
   fonts.fontconfig.enable = true;
 
@@ -53,5 +51,10 @@
   programs.bat = {
     enable = true;
     config = { color="always";  pager = "less -FR";  theme = "Dracula"; };
+  };
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = pkgs.lib.importTOML ./starship.toml;
   };
 }
