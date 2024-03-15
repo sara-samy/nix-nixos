@@ -48,7 +48,8 @@
     ];
     shellAliases = import ./aliases.nix {inherit pkgs lib config;};
     initExtra = ''
-      ${builtins.readFile ./custom-zshrc}
+      ${builtins.readFile ./zsh-functions}
+      ${builtins.readFile ./keybindings}
     '';
   };
 }
