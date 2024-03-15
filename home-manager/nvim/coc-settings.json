@@ -1,0 +1,51 @@
+{
+  "colors.enable": true,
+  "coc.preferences.formatOnSave": false,
+  "coc.preferences.formatOnType": true,
+
+  "suggest.enableFloat": true,
+  "suggest.defaultSortMethod": "none",
+  "suggest.snippetsSupport": true,
+  "suggest.acceptSuggestionOnCommitCharacter": true,
+
+  "diagnostic.enable": true,
+  "diagnostic.enableSign": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextLines": 1,
+  "diagnostic.virtualTextPrefix": "——",
+  "diagnostic.checkCurrentLine": true,
+
+  "yank.highlight.enable": true,
+  "yank.enableCompletion": true,
+
+  "Lua.diagnostics.enable": true,
+  "Lua.completion.callSnippet": "Both",
+  "Lua.workspace.checkThirdParty": false,
+
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pep8Enabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.formatting.provider": "black",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportGeneralTypeIssues": "none",
+    "reportImportCycles": "warning",
+    "reportMissingImports": "warning",
+    "reportUnnecessaryCast": "warning",
+    "reportUnnecessaryComparison": "warning",
+    "reportUnnecessaryIsInstance": "warning",
+  },
+
+  "languageserver": {
+   "nix": {
+    "command": "nil",
+    "filetypes": ["nix"],
+    "rootPatterns":  ["flake.nix"],
+    "settings": {
+     "nil": {
+      "formatting": { "command": ["nixpkgs-fmt"] }
+     }
+    },
+   }
+  },
+}

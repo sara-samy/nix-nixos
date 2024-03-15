@@ -7,8 +7,6 @@
     ./kitty
   ]; 
 
-  home.stateVersion = "23.11"; # Don't edit.
-
   home.username = "sarasamy";
   home.homeDirectory = "/home/sarasamy";
   home.sessionVariables = {
@@ -19,15 +17,24 @@
     source = ./starship.toml;
   };
 
+  home.stateVersion = "23.11";
+
   home.packages = with pkgs; [
     gh
-    fzf
+    fd
     unzip
     ripgrep
+    pdfgrep
+    figlet
     neofetch
+    # nix-related
     nurl
+    nil
+    # media
     yt-dlp
     ffmpeg
+    glow
+    # fonts
     fantasque-sans-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
     (google-fonts.override { fonts = [ "Spectral" ]; })
@@ -56,5 +63,15 @@
     enable = true;
     enableZshIntegration = true;
     settings = pkgs.lib.importTOML ./starship.toml;
+  };
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    historyWidgetOptions = [ "--sort"  "--exact" ];
+    fileWidgetCommand = "";
+  };
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }

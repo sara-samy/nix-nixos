@@ -1,0 +1,14 @@
+####################
+# Extra zsh config #
+####################
+
+# General utilites
+function mkcd(){
+  mkdir -p "$@" && eval cd "\"\$$#\"";
+}
+function nurl-to-null(){
+  nurl $1 $2 2>/dev/null
+}
+
+# Keybindings
+bindkey -M viins '^R' fzf-history-widget # doesn't work yet..
