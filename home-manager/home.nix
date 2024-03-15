@@ -52,7 +52,7 @@
     enable = true;
     git = true;
     icons = true;
-    enableAliases = true;
+    enableZshIntegration = true;
     extraOptions = [ "--icons" ];
   };
   programs.bat = {
