@@ -103,12 +103,6 @@ require'nvim-web-devicons'.setup {
     color = "#81e043",
     name = "Log"
   },
-  -- mononoki nf doesn't show icon for .toml
-  ["toml"] = {
-    icon = "🫥",
-    color = "#37e122",
-    name = "Toml"
-  }
  };
 }
 
