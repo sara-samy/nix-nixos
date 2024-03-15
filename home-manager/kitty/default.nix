@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    theme = "Dimmed Monokai";
+    theme = "Dracula";
     font = {
-      name = "Mononoki";
+      name = "mononoki Nerd Font";
       size = 12.0;
     };
     keybindings = {
