@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    theme = "Adventure Time";
+    theme = "Dimmed Monokai";
     font = {
       name = "Mononoki";
       size = 12.0;
