@@ -17,6 +17,6 @@
     extraConfig = builtins.readFile ./kitty.conf;
     shellIntegration = {
       enableZshIntegration = true;
-    };        
+    };
   };
 }
