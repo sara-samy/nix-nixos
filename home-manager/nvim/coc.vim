@@ -30,10 +30,6 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" Custom commands
-command! BlackFormat call CocAction('format')
-command! SortImports call CocAction('runCommand', 'python.sortImports')
-
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
 nmap <silent> <leader>pd <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>nd <Plug>(coc-diagnostic-next)
@@ -123,10 +119,14 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 command! -nargs=0 Format :call CocActionAsync('format')
 
 " Add `:Fold` command to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer
-command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :call CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+" Custom commands
+command! BlackFormat call CocAction('format')
+command! SortImports call CocAction('runCommand', 'python.sortImports')
 
 " Add (Neo)Vim's native statusline support
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -134,17 +134,19 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
+" Show coc list
+nnoremap <silent><nowait> <space>s  :<C-u>CocList<cr>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-" Show all diagnostics
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+" Manage extensions
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Find symbol of current document
 nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Coc yank
+" Show all diagnostics
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+" Show coc yank
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+" Show coc marketplace
+nnoremap <silent> <space>g  :<C-u>CocList marketplace<cr>

@@ -89,7 +89,7 @@ disabled = false
 symbol = "🦀 "
 
 [custom.obsidian]
-symbol = "👾 "
+symbol = "👾"
 detect_folders = ['.obsidian']
 style = 'bold italic dimmed fg:purple'
 format = '[$symbol.obsidian ]($style)'

@@ -6,8 +6,8 @@
       enable = true;
       highlighters = [ "brackets" ];
       styles = {
-        comment = "fg=black,bold";
-	path = "fg=cyan";
+        comment = "fg=black, italic";
+	path = "fg=#82AAFF";
       };
     };
     history = {

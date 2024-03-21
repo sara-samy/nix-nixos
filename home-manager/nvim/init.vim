@@ -58,6 +58,9 @@ nnoremap t :tabnew<CR>
 nnoremap Z :vsplit<CR>
 " Redo with U instead of <C-R>
 noremap U <C-R>
+" Adjust indent with tab and shift-tab in normal mode
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
 " Jump backwards with <C-l> as we do forward with <C-o>
 nnoremap <C-l> <C-i>
 " Open folds with <space>

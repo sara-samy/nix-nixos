@@ -18,34 +18,35 @@
   "yank.highlight.enable": true,
   "yank.enableCompletion": true,
 
+  "json.enable": true,
+  "json.format.enable": true,
+  "json.validate.enable": true,
+
+  "Lua.format.enable": true,
   "Lua.diagnostics.enable": true,
+  "Lua.diagnostics.globals": [ "vim" ],
   "Lua.completion.callSnippet": "Both",
   "Lua.workspace.checkThirdParty": false,
 
+  "sh.enable": true,
+  "bashIde.shellcheckPath": "shellcheck",
+  "bashIde.enableSourceErrorDiagnostics": true,
+  "bashIde.includeAllWorkspaceSymbols": false,
+
+  "vimlsp.debug": true,
+  "vimlsp.diagnostic.enable": true,
+
+  "nil.enable": true,
+
+  "pyright.enable": true,
+  "python.formatting.provider": "black",
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
-  "python.linting.pep8Enabled": false,
-  "python.linting.pylintEnabled": false,
-  "python.formatting.provider": "black",
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportGeneralTypeIssues": "none",
-    "reportImportCycles": "warning",
-    "reportMissingImports": "warning",
-    "reportUnnecessaryCast": "warning",
-    "reportUnnecessaryComparison": "warning",
-    "reportUnnecessaryIsInstance": "warning",
-  },
+  "pyright.testing.provider": "pytest",
+  "pyright.testing.pytestArgs": [],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "openFilesOnly",
 
-  "languageserver": {
-   "nix": {
-    "command": "nil",
-    "filetypes": ["nix"],
-    "rootPatterns":  ["flake.nix"],
-    "settings": {
-     "nil": {
-      "formatting": { "command": ["nixpkgs-fmt"] }
-     }
-    },
-   }
-  },
+  "pydocstring.enable": true,
+  "pydocstring.formatter": "sphinx",
 }
