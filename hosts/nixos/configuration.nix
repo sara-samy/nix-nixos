@@ -90,6 +90,8 @@
     packages = with pkgs; [
       firefox
       gnome-console
+      gnome.nautilus
+      gnome.gnome-tweaks
     ];
   };
 
@@ -117,7 +119,6 @@
     wget
     git
     curl
-    gnome.gnome-tweaks
   ];
   environment.variables.EDITOR = "vim";
 

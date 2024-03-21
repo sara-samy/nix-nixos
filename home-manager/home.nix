@@ -1,11 +1,11 @@
-{ config, pkgs, ... }: {
+{pkgs, ...}: {
   imports = [
     ./gui.nix
     ./zsh
     ./nvim
     ./git
     ./kitty
-  ]; 
+  ];
 
   home.username = "sarasamy";
   home.homeDirectory = "/home/sarasamy";
@@ -41,8 +41,8 @@
     glow
     # fonts
     fantasque-sans-mono
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "Mononoki" ]; })
-    (google-fonts.override { fonts = [ "Spectral" ]; })
+    (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki"];})
+    (google-fonts.override {fonts = ["Spectral"];})
   ];
 
   fonts.fontconfig.enable = true;
@@ -50,19 +50,22 @@
   programs.home-manager.enable = true;
   programs.zoxide = {
     enable = true;
-    options = [ "--cmd cd" ];
+    options = ["--cmd cd"];
     enableZshIntegration = true;
   };
   programs.eza = {
     enable = true;
     git = true;
     icons = true;
-    enableZshIntegration = true;
-    extraOptions = [ "--icons" ];
+    extraOptions = ["--icons"];
   };
   programs.bat = {
     enable = true;
-    config = { color="always";  pager = "less -FR";  theme = "Dracula"; };
+    config = {
+      color = "always";
+      pager = "less -FR";
+      theme = "Dracula";
+    };
   };
   programs.starship = {
     enable = true;
@@ -72,7 +75,7 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    historyWidgetOptions = [ "--sort"  "--exact" ];
+    historyWidgetOptions = ["--sort" "--exact"];
     fileWidgetCommand = "";
   };
   programs.direnv = {
