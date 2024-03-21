@@ -40,6 +40,8 @@
     ffmpeg
     imagemagick
     glow
+    # python
+    poetry
     # fonts
     fantasque-sans-mono
     (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki"];})
