@@ -15,6 +15,13 @@
 
     userName = "sara-samy";
     userEmail = "intermsofart@hotmail.com";
+    includes = [
+        {
+            # use a different email/username for work
+            path = "/home/${username}/Downloads/ddg/pyddg/.gitconfig";
+            condition = "gitdir:/home/${username}/Downloads/ddg/pyddg/";
+        }
+    ];
 
     extraConfig = {
       init.defaultBranch = "main";
