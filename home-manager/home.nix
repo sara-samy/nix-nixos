@@ -14,8 +14,13 @@
     EDITOR = "nvim";
   };
 
-  home.file."starship.toml" = {
-    source = ./starship.toml;
+  home.file = {
+    "starship.toml" = {
+      source = ./starship.toml;
+    };
+    "zathurarc" = {
+      source = ./zathurarc;
+    };
   };
 
   home.stateVersion = "23.11";
