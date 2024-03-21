@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./gui.nix
+    ./gnome.nix
     ./zsh
     ./nvim
     ./git
