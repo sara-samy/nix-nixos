@@ -28,11 +28,16 @@
     figlet
     neofetch
     # nix-related
-    nurl
     nil
+    nurl
+    alejandra
+    # latex
+    ghostscript
+    texlive.combined.scheme-full
     # media
     yt-dlp
     ffmpeg
+    imagemagick
     glow
     # fonts
     fantasque-sans-mono
