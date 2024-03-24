@@ -35,8 +35,17 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+  # Configure console keymap
+  console.keyMap = "de";
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  # Configure keymap in X11
+  services.xserver = {
+    xkb.layout = "de";
+    xkb.variant = "";
+  };
+
   # Mullvad vpn
   services.mullvad-vpn = {
     enable = true;
@@ -44,17 +53,8 @@
     package = pkgs.mullvad-vpn;
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "de";
-    xkb.variant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "de";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  # Configure CUPS to print documents.
+  services.printing.enable = false;
 
   # Enable Firmware of all licenses.
   hardware.enableAllFirmware = true;
