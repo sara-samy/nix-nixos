@@ -45,7 +45,6 @@
     ];
 
     aliases = {
-      stash = "stash --all";
       uncommit = "reset --soft HEAD~1";
       checkout-remote = "checkout --track";
 
@@ -54,7 +53,7 @@
 
       unpushed = "!GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline";
 
-      log = "log --abbrev-commit";
+      llog = "log --abbrev-commit";
       logline = "log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate=full";
     };
   };

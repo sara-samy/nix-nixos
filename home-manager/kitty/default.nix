@@ -3,7 +3,7 @@
     enable = true;
     theme = "Dracula";
     font = {
-      name = "mononoki Nerd Font";
+      name = "IosevkaTerm Nerd Font";
       size = 12.0;
     };
     keybindings = {

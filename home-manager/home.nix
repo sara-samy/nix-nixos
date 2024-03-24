@@ -50,7 +50,7 @@
     poetry
     # fonts
     fantasque-sans-mono
-    (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki"];})
+    (nerdfonts.override {fonts = ["JetBrainsMono" "Mononoki" "IosevkaTerm"];})
     (google-fonts.override {fonts = ["Spectral"];})
   ];
 
