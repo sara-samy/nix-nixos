@@ -98,15 +98,15 @@ nnoremap <expr> ft ':Telescope buffers    cwd='.FindRootDirectory().'/<cr>'
 
 " Vimtex
 let g:tex_flavor='latex'
-let g:vimtex_view_enabled = 0
-let g:vimtex_view_method = 'skim'
-let g:vimtex_view_skim_activate = 1
+let g:vimtex_view_enabled = 1
 let g:vimtex_quickfix_mode= 1
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_skim_activate = 1
 
-let g:vimtex_imaps_enabled = 0
-let g:vimtex_labels_enabled = 0
 let g:vimtex_toc_enabled = 0
+let g:vimtex_imaps_enabled = 0
 let g:vimtex_indent_enabled = 0
+let g:vimtex_labels_enabled = 0
 let g:vimtex_indent_bib_enabled = 0
 let g:vimtex_syntax_conceal_disable = 0
 
@@ -114,4 +114,4 @@ let g:vimtex_syntax_conceal_disable = 0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
-let g:UltiSnipsSnippetDirectories = ['/Users/sarasamy/.config/nvim/custom_snippets']
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/UltiSnips'] " -> symbolic link to ./UltiSnips

@@ -32,6 +32,8 @@
     xclip
     ripgrep
     pdfgrep
+    gnumake
+    # display
     figlet
     neofetch
     # nix-related
@@ -41,6 +43,7 @@
     # latex
     ghostscript
     texlive.combined.scheme-full
+    texlab
     # media
     yt-dlp
     ffmpeg

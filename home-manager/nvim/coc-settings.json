@@ -15,6 +15,8 @@
   "diagnostic.virtualTextPrefix": "——",
   "diagnostic.checkCurrentLine": true,
 
+  "snippets.ultisnips.enable": true,
+
   "yank.highlight.enable": true,
   "yank.enableCompletion": true,
 
@@ -51,12 +53,10 @@
   "pydocstring.formatter": "sphinx",
 
   "texlab.build.onSave": false,
-  "texlab.bibtexFormatter":"texlab",
-  "texlab.formatterLineLength":40,
-  "texlab.latexFormatter":"latexindent",
-  "texlab.chktex.onOpenAndSave":true,
+  "texlab.bibtexFormatter": "texlab",
+  "texlab.formatterLineLength": 40,
+  "texlab.latexFormatter": "latexindent",
+  "texlab.chktex.onOpenAndSave": true,
   "texlab.latexindent.modifyLineBreaks": false,
   "texlab.forwardSearch.executable": "/Applications/Skim.app/Contents/MacOS/Skim",
-
-  "ltex.enabled": false,
 }
