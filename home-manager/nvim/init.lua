@@ -238,6 +238,10 @@ require('telescope').load_extension('file_browser')
 -- Load coc search
 require('telescope').load_extension('coc')
 
+-- Load ultiSnips
+require('telescope').load_extension('ultisnips')
+
+
 -- Define keymappings
 -- Defined also in init.vim
 api.nvim_set_keymap('n', 'fc', '<cmd>Telescope coc<cr>', { noremap = true, silent = true })

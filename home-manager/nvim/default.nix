@@ -29,6 +29,7 @@
       { plugin = plenary-nvim; optional = false; }
       { plugin = telescope-nvim; optional = false; }
       { plugin = telescope-coc-nvim; optional = false; }
+      { plugin = telescope-ultisnips-nvim; optional = false; }
       { plugin = telescope-fzf-native-nvim; optional = false; }
       { plugin = telescope-file-browser-nvim; optional = false; }
 
@@ -36,7 +37,9 @@
       { plugin = nvim-autopairs; optional = false; }
       { plugin = nvim-colorizer-lua; optional = false; }
 
+      { plugin = vimtex; optional = false; }
       { plugin = vim-nix; optional = false; }
+      { plugin = ultisnips; optional = false; }
 
       { plugin = vim-repeat; optional = false; }
       { plugin = vim-rooter; optional = false; }

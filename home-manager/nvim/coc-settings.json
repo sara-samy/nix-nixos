@@ -49,4 +49,14 @@
 
   "pydocstring.enable": true,
   "pydocstring.formatter": "sphinx",
+
+  "texlab.build.onSave": false,
+  "texlab.bibtexFormatter":"texlab",
+  "texlab.formatterLineLength":40,
+  "texlab.latexFormatter":"latexindent",
+  "texlab.chktex.onOpenAndSave":true,
+  "texlab.latexindent.modifyLineBreaks": false,
+  "texlab.forwardSearch.executable": "/Applications/Skim.app/Contents/MacOS/Skim",
+
+  "ltex.enabled": false,
 }
