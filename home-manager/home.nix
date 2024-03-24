@@ -29,6 +29,7 @@
     gh
     fd
     unzip
+    xclip
     ripgrep
     pdfgrep
     figlet
